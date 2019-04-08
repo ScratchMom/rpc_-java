@@ -18,7 +18,7 @@ public class Client {
     /**
      * 获取代表服务端接口的动态代理对象
      *
-     * @param serviceInterface 请求接口名
+     * @param serviceInterface 代理请求接口名
      * @param addr             带请求服务端ip：端口
      * @param <T>
      * @return
@@ -97,7 +97,7 @@ public class Client {
     public static void main(String[] args) throws Exception {
         Client client = new Client();
         // todo RPC客户端和RPC服务器端需要一个相同的接口类，RPC客户端通过一个代理类来调用RPC服务器端的函数
-         HelloServicee servicee = client.getRemoteProxyObj(Class.forName("HelloServicee"), new InetSocketAddress("localhost", 9999));
+         HelloService servicee = client.getRemoteProxyObj(Class.forName("HelloService"), new InetSocketAddress("localhost", 9999));
         servicee.sayHi("lao wang");
     }
 }

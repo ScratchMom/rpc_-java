@@ -127,7 +127,7 @@ public class ServerImpl implements Server {
 
     public static void main(String[] args) throws Exception {
         ServerImpl server = new ServerImpl(9999);
-        server.register(HelloServicee.class, HelloServiceeImpl.class);
+        server.register(HelloService.class, HelloServiceImpl.class);
         server.start();
     }
 }
